@@ -19,6 +19,7 @@ public class AdvancedJavaCourse implements ProgrammingCourse {
         this.setCourseNumber(courseNumber);
     }
     
+    //overrides all methods from interface
     @Override
     public String getCourseNumber() {
         return courseNumber;
@@ -48,11 +49,15 @@ public class AdvancedJavaCourse implements ProgrammingCourse {
         }
         this.credits = credits;
     }
-
+    
+    //this method is not from the interface
+    //not all courses need prerequisites
     public String getPrerequisites() {
         return prerequisites;
     }
     
+    //this method is not from the interface
+    //not all courses need prerequisites
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,

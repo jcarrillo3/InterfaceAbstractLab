@@ -17,6 +17,7 @@ public class IntroJavaCourse implements ProgrammingCourse {
         this.courseNumber = courseNumber;
     }
     
+    //overrides all methods from interface
     @Override
     public String getCourseNumber() {
         return courseNumber;
@@ -36,11 +37,15 @@ public class IntroJavaCourse implements ProgrammingCourse {
     public void setCredits(double credits) {
         this.credits = credits;
     }
-
+    
+    //this method is not from the interface
+    //not all courses need prerequisites
     public String getPrerequisites() {
         return prerequisites;
     }
-
+    
+    //this method is not from the interface
+    //not all courses need prerequisites
     public void setPrerequisites(String prerequisites) {
         this.prerequisites = prerequisites;
     }

@@ -18,6 +18,7 @@ public class IntroToProgrammingCourse implements ProgrammingCourse{
         this.setCourseNumber(courseNumber);
     }
     
+    //overrides all methods from interface
     @Override
     public String getCourseNumber() {
         return courseNumber;
