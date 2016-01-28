@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab2;
+package lab1;
 
 /**
  *
@@ -15,9 +15,9 @@ public class StartUp {
         //this architecture can look a bit messy or not very professional
         
         //this architecture is very easy to understand
-        IntroToProgrammingCourse course1 = new IntroToProgrammingCourse("IntroToProgramming", "CRN100");
-        IntroJavaCourse course2 = new IntroJavaCourse("IntroJava", "CRN101");
-        AdvancedJavaCourse course3 = new AdvancedJavaCourse("AdvancedJava", "CRN102");
+        lab2.IntroToProgrammingCourse course1 = new lab2.IntroToProgrammingCourse("IntroToProgramming", "CRN100");
+        lab2.IntroJavaCourse course2 = new lab2.IntroJavaCourse("IntroJava", "CRN101");
+        lab2.AdvancedJavaCourse course3 = new lab2.AdvancedJavaCourse("AdvancedJava", "CRN102");
         
         System.out.println(course1.getCourseName()+ ' '+course1.getCourseNumber());
         System.out.println(course2.getCourseName()+ ' '+course2.getCourseNumber());
