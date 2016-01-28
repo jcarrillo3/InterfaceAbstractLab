@@ -1,7 +1,10 @@
 package lab2;
 
 /**
- * Describe responsibilities here.
+ * The IntroJavaCourse class overrides the methods from the super class
+ * Programming Course. The only methods it does not override are the two methods 
+ * for the prerequisites because not all the classes that implement from 
+ * ProgrammingCourse have prerequisites.
  *
  * @author      Juan Carrillo
  * @version     1.00

@@ -3,7 +3,8 @@ package lab2;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here.
+ * This class overrides all the methods from the super class. It keeps all its properties
+ * since the super class is an interface.
  *
  * @author      Juan Carrillo
  * @version     1.00
