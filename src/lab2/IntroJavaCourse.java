@@ -15,11 +15,7 @@ public class IntroJavaCourse implements ProgrammingCourse {
     private double credits;
     private String prerequisites;
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-    }
-    
+
     //overrides all methods from interface
     @Override
     public String getCourseNumber() {

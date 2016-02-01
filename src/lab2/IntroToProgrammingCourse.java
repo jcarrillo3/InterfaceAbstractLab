@@ -13,11 +13,6 @@ public class IntroToProgrammingCourse implements ProgrammingCourse{
     private String courseName;
     private String courseNumber;
     private double credits;
-
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
-    }
     
     //overrides all methods from interface
     @Override

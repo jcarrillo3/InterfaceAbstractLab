@@ -17,11 +17,6 @@ public class AdvancedJavaCourse implements ProgrammingCourse {
     private double credits;
     private String prerequisites;
 
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
-    }
-    
     //overrides all methods from interface
     @Override
     public String getCourseNumber() {
