@@ -9,30 +9,42 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class AdvancedJavaCourse extends ProgrammingCourse{
-
-    public AdvancedJavaCourse(String courseName, String courseNumber, double credits, String prerequisites) {
-        super(courseName, courseNumber, credits, prerequisites);
+    private String courseName;
+    private String courseNumber;
+    private double credits;
+    private String prerequisites;
+    
+    //For this class, I overrode the setPrerequisites method
+    //so I can do the validation and make sure it is valid.
+    @Override
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
     }
     
+    //Overrode all the get methods for each property
     @Override
     public String getPrerequisites() {
-        return "Java Programming";
-    }
-
-    @Override
-    public String getCourseName() {
-        return "Advanced Java Programming";
+        return prerequisites;
     }
 
     @Override
     public String getCourseNumber() {
-        return "L117_2";
+        return courseNumber;
     }
 
     @Override
     public double getCredits() {
-        return 4;
+        return credits;
     }
 
+    @Override
+    public String getCourseName() {
+        return courseName;    
+    }
     
 }

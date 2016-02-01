@@ -1,4 +1,5 @@
 package lab1;
+import javax.swing.JOptionPane;
 
 /**
  * Describe responsibilities here.
@@ -7,30 +8,46 @@ package lab1;
  * @version     1.00
  */
 public class IntroJavaCourse extends ProgrammingCourse{
-
-    public IntroJavaCourse(String courseName, String courseNumber, double credits, String prerequisites) {
-        super(courseName, courseNumber, credits, prerequisites);
+    private String courseName;
+    private String courseNumber;
+    private double credits;
+    private String prerequisites;
+    
+    //For this class, I overrode the setPrerequisites method
+    //so I can do the validation and make sure it is valid.
+    @Override
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
+    
+    }
+    
+    //Overrode all the get methods for each property
+    @Override
+    public String getPrerequisites() {
+        return prerequisites;
     }
 
     @Override
     public String getCourseNumber() {
-        return "L117";
+        return courseNumber;
     }
 
     @Override
     public double getCredits() {
-        return 4.0;
-    }
-
-    @Override
-    public String getPrerequisites() {
-        return "Intro to Programming";
+        return credits;
     }
 
     @Override
     public String getCourseName() {
-        return "Java Programming";
+        return courseName;    
     }
+
+    
 
 
 }

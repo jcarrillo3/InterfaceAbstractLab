@@ -16,23 +16,10 @@ public abstract class ProgrammingCourse {
     private String courseNumber;
     private double credits;
     private String prerequisites;
-
-    public ProgrammingCourse(String courseName, String courseNumber, double credits, String prerequisites) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-        this.credits = credits;
-        this.prerequisites = prerequisites;
-    }
-
-    public ProgrammingCourse(String courseName, String courseNumber, double credits) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-        this.credits = credits;
-    }
     
     public abstract String getCourseNumber();
     
-    public void setCourseNumber(String courseNumber){
+    public final void setCourseNumber(String courseNumber){
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseNumber cannot be null of empty string");
@@ -42,7 +29,7 @@ public abstract class ProgrammingCourse {
     }
     public abstract double getCredits();
     
-    public void setCredits(double credits){
+    public final void setCredits(double credits){
             if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
@@ -61,13 +48,9 @@ public abstract class ProgrammingCourse {
         }
         this.courseName = courseName;
     }
-    public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
-        }
-        this.prerequisites = prerequisites;
-    }
+    //This setPrerequisites method was made abstarct because the behavior
+    //will not be the same for all sub classes.
+    public abstract void setPrerequisites(String prerequisites);
+
     public abstract String getPrerequisites();
 }

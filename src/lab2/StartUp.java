@@ -15,13 +15,7 @@ public class StartUp {
         //this architecture can look a bit messy or not very professional
         
         //this architecture is very easy to understand
-        IntroToProgrammingCourse course1 = new IntroToProgrammingCourse("IntroToProgramming", "CRN100");
-        IntroJavaCourse course2 = new IntroJavaCourse("IntroJava", "CRN101");
-        AdvancedJavaCourse course3 = new AdvancedJavaCourse("AdvancedJava", "CRN102");
         
-        System.out.println(course1.getCourseName()+ ' '+course1.getCourseNumber());
-        System.out.println(course2.getCourseName()+ ' '+course2.getCourseNumber());
-        System.out.println(course3.getCourseName()+ ' '+course3.getCourseNumber());
         
         //Liskov's substitution principle can be beneficial if the class you 
         //instatiate inherits and only contains the methods from the superclass.

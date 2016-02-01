@@ -10,30 +10,40 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class IntroToProgrammingCourse extends ProgrammingCourse{
+    private String courseName;
+    private String courseNumber;
+    private double credits;
+    private String prerequisites;
     
-    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits) {
-        super(courseName, courseNumber, credits);
+    //I overrode the setPrerequisites method because it is abstarct in my 
+    //super class. It is abtract because I want the behavior of this method to be different  
+    //for this particular class. Since it has no prerequisites, it will alwasy set it to
+    //None no matter what the user tries to input.
+    @Override
+    public void setPrerequisites(String prerequisites) {
+        this.prerequisites = "None";
     }
-    
- 
+    //I also overrode all the get methods for each property
+    @Override
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+
     @Override
     public String getCourseNumber() {
-        return "CRN-100";
+        return courseNumber;
     }
 
     @Override
     public double getCredits() {
-        return 4;
+        return credits;
     }
 
     @Override
     public String getCourseName() {
-        return "Intro to Programming";
+        return courseName;    
     }
-
-    @Override
-    public String getPrerequisites() {
-        return "None";
-    }
+    
+    
     
 }
