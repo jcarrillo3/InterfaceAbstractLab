@@ -9,9 +9,6 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class AdvancedJavaCourse extends ProgrammingCourse{
-    private String courseName;
-    private String courseNumber;
-    private double credits;
     private String prerequisites;
     
     //For this class, I overrode the setPrerequisites method
@@ -25,26 +22,4 @@ public class AdvancedJavaCourse extends ProgrammingCourse{
         }
         this.prerequisites = prerequisites;
     }
-    
-    //Overrode all the get methods for each property
-    @Override
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-
-    @Override
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    @Override
-    public double getCredits() {
-        return credits;
-    }
-
-    @Override
-    public String getCourseName() {
-        return courseName;    
-    }
-    
 }

@@ -17,7 +17,9 @@ public abstract class ProgrammingCourse {
     private double credits;
     private String prerequisites;
     
-    public abstract String getCourseNumber();
+    public final String getCourseNumber(){
+        return courseNumber;
+    }
     
     public final void setCourseNumber(String courseNumber){
         if(courseNumber == null || courseNumber.length() == 0) {
@@ -27,7 +29,9 @@ public abstract class ProgrammingCourse {
         }
         this.courseNumber = courseNumber;
     }
-    public abstract double getCredits();
+    public final double getCredits(){
+        return credits;
+    }
     
     public final void setCredits(double credits){
             if(credits < 0.5 || credits > 4.0) {
@@ -38,7 +42,9 @@ public abstract class ProgrammingCourse {
         this.credits = credits;
     }
     
-    public abstract String getCourseName();
+    public final String getCourseName(){
+        return courseName;
+    }
 
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
@@ -52,5 +58,7 @@ public abstract class ProgrammingCourse {
     //will not be the same for all sub classes.
     public abstract void setPrerequisites(String prerequisites);
 
-    public abstract String getPrerequisites();
+    public final String getPrerequisites(){
+        return prerequisites;
+    }
 }

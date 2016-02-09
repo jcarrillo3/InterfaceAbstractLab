@@ -20,16 +20,15 @@ public class StartUp {
         //You might need to use a method that only belongs to the sub class 
         
         IntroToProgrammingCourse c1 = new IntroToProgrammingCourse();
+        c1.setCourseNumber("Course1");
         
-        c1.setPrerequisites("Hello");
-        
-        System.out.println(c1.getPrerequisites());
+        System.out.println(c1.getCourseNumber());
         
         ProgrammingCourse[] Courses = {new IntroToProgrammingCourse(), 
          new IntroJavaCourse(), new AdvancedJavaCourse()};
         
-        for (ProgrammingCourse course: Courses){
-            System.out.println(course.getPrerequisites());
-        }
+//        for (ProgrammingCourse course: Courses){
+//            System.out.println(course.getPrerequisites());
+//        }
     }    
 }
